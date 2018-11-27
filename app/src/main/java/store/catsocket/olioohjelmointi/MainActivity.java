@@ -3,11 +3,13 @@ package store.catsocket.olioohjelmointi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView text;
+    EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +18,12 @@ public class MainActivity extends AppCompatActivity {
         // this.testMethod();
 
         text = (TextView) findViewById(R.id.textView);
+        editText = (EditText) findViewById(R.id.editText);
     }
 
-    public void testMethod(View v){
+    public void testMethod(View v) {
 
-        System.out.println("Hello World!");
-        text.setText("Moi maailma!");
+        String newText = editText.getText().toString();
+        text.setText(newText);
     }
 }
